@@ -2,14 +2,25 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-vim.keymap.set('n', '=', [[<cmd>vertical resize +5<cr>]]) -- make the window biger vertically
-vim.keymap.set('n', '-', [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
+vim.keymap.set('n', '=', [[<cmd>vertical resize +5<cr>]])   -- make the window biger vertically
+vim.keymap.set('n', '-', [[<cmd>vertical resize -5<cr>]])   -- make the window smaller vertically
 vim.keymap.set('n', '+', [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
 vim.keymap.set('n', '_', [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
 
 vim.keymap.set('n', 'mcr', [[<cmd>Cargo run<cr>]])
 vim.keymap.set('n', 'mca', [[<cmd>Cargo add<cr>]])
-vim.keymap.set('n', '<C-[>', [[<cmd>bNext<cr>]])
+vim.keymap.set('n', '<C-]>', [[<cmd>bNext<cr>]])
+vim.keymap.set('n', '<C-[>', [[<cmd>brewind<cr>])
+vim.keymap.set('n', '<Space>tn', [[<cmd>tabnew<cr>]])
+vim.keymap.set('n', '<Space>op', [[<cmd>Neotree toggle<cr>]])
+vim.keymap.set('n', '<Space>bd', [[<cmd>bdelete<cr>]])
+
+
+vim.o.guifont = "Iosevka Medium Extended"
+vim.g.neovide_refresh_rate_idle = 5
+vim.g.neovide_refresh_rate = 60
+vim.g.neovide_scale_factor = 0.8
+vim.g.neovide_transparency = 0.5
 
 return {
   {
