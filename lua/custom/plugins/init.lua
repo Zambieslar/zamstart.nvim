@@ -26,6 +26,12 @@ vim.g.neovide_scale_factor = 0.7
 vim.g.neovide_transparency = 0.3
 vim.g.neovide_fullscreen = false
 
+vim.api.nvim_create_autocmd('VimEnter', {
+  callback = function()
+    vim.cmd 'Neotree'
+  end,
+})
+
 return {
   {
     'nvim-neo-tree/neo-tree.nvim',
@@ -84,6 +90,7 @@ return {
       projects = { -- define project roots
         '~/projects/*',
         '~/.config/*',
+        '~/Documents/Programs/*',
       },
     },
     init = function()
