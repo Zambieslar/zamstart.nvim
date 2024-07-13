@@ -6,8 +6,9 @@ vim.keymap.set('n', '=', [[<cmd>vertical resize +5<cr>]]) -- make the window big
 vim.keymap.set('n', '-', [[<cmd>vertical resize -5<cr>]]) -- make the window smaller vertically
 vim.keymap.set('n', '+', [[<cmd>horizontal resize +2<cr>]]) -- make the window bigger horizontally by pressing shift and =
 vim.keymap.set('n', '_', [[<cmd>horizontal resize -2<cr>]]) -- make the window smaller horizontally by pressing shift and -
-
-vim.keymap.set('n', 'mcr', [[<cmd>Cargo run<cr>]])
+vim.keymap.set('n', '<Space>pd', [[<cmd>Telescope neovim-project discover<cr>]])
+vim.keymap.set('n', '<Space>pp', [[<cmd>Telescope neovim-project<cr>]])
+vim.keymap.set('n', 'mcr', [[<cmd>!cargo run<cr>]])
 vim.keymap.set('n', 'mca', [[<cmd>Cargo add<cr>]])
 vim.keymap.set('n', '<C-]>', [[<cmd>bNext<cr>]])
 vim.keymap.set(
@@ -83,6 +84,7 @@ return {
   },
   {
     'nvim-tree/nvim-web-devicons',
+    enabled = true,
   },
   {
     'coffebar/neovim-project',
